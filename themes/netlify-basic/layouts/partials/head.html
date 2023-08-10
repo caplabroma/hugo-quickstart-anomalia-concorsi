@@ -6,22 +6,25 @@
   {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
   <title>{{ $title }}</title>
 
-  <script>  
-   if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+  
+<script>  
+document.addEventListener('DOMContentLoaded', function(){
+  let elem = [];
+  if (/webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    elem = document.getElementsByClassName('store-google');
+  }
+  else if (/Android/.test(navigator.userAgent)){
+    elem = document.getElementsByClassName('store-apple');
+  } else {
+   alert('DESKTOP');
+  }
 
-    alert("iOS.");
-
-} else if (/Android/.test(navigator.userAgent)) {
-
-    alert("Android");
-
-} else {
-
-  alert("Desktop");
-
-}
-
-
+  for(let item of elem){
+    item.classList.add('d-none');
+    const anchor = item.getElementsByClassName('btn-store');
+  }
+  
+});
 </script>
   
 </head>
