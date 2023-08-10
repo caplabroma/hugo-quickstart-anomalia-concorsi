@@ -7,22 +7,18 @@
   <title>{{ $title }}</title>
 
   <script>  
-    
-  document.addEventListener('DOMContentLoaded', function(){
-    let elem = [];
-    if (/webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-      elem = document.getElementsByClassName('store-google');
-    }
-    else {
-      elem = document.getElementsByClassName('store-apple');
-    }
-  
-    for(let item of elem){
-      item.classList.add('d-none');
-      const anchor = item.getElementsByClassName('btn-store');
-    }
-  
+    document.addEventListener('DOMContentLoaded', function(){
+  var iOS = !window.MSStream && /iPad|iPhone|iPod/.test(navigator.userAgent); 
+  var android = !window.MSStream && /Android/.test(navigator.userAgent); 
+  if (iOS) {
+    alert("IOS");
+  }
+  if (android) {
+    alert("Android");
+  }
 });
+
+
 </script>
   
 </head>
