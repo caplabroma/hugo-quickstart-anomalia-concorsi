@@ -128,3 +128,22 @@ body{
   color: black;
   line-height: 30px;
 }
+
+
+
+.btn-store {
+  border-radius: 5px;
+  background-size: cover;
+  background-position-x: center;
+  background-origin: border-box;
+  width: 160px;
+  height: 45px;
+}
+
+.btn-google {
+  background-image: url('loghi/google-store.png') !important;
+}
+
+.btn-apple {
+  background-image: url('loghi/apple-store.png') !important;
+}
