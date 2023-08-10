@@ -10,15 +10,15 @@
 <script>  
 document.addEventListener('DOMContentLoaded', function(){
   let elem = [];
+  
   if (/webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
     elem = document.getElementsByClassName('store-google');
   }
-  else if (/Android/.test(navigator.userAgent)){
+  
+  if (/Android/i.test(navigator.userAgent)){
     elem = document.getElementsByClassName('store-apple');
-  } else {
-   alert('DESKTOP');
-  }
-
+  } 
+  
   for(let item of elem){
     item.classList.add('d-none');
     const anchor = item.getElementsByClassName('btn-store');
