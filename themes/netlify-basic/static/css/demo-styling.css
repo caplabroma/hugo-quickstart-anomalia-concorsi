@@ -147,3 +147,7 @@ body{
 .btn-apple {
   background-image: url('apple-store.png') !important;
 }
+
+.d-none {
+  display: none !important;
+}
