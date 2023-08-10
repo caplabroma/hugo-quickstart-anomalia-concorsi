@@ -7,16 +7,19 @@
   <title>{{ $title }}</title>
 
   <script>  
-    document.addEventListener('DOMContentLoaded', function(){
-  var iOS = !window.MSStream && /iPad|iPhone|iPod/.test(navigator.userAgent); 
-  var android = !window.MSStream && /Android/.test(navigator.userAgent); 
-  if (iOS) {
-    alert("IOS");
-  }
-  if (android) {
+   if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+
+    alert("iOS.");
+
+} else if (/Android/.test(navigator.userAgent)) {
+
     alert("Android");
-  }
-});
+
+} else {
+
+  alert("Desktop");
+
+}
 
 
 </script>
