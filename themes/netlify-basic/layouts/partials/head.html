@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', function(){
   if (/webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
     elem = document.getElementsByClassName('store-google');
   }
+
+  if (/Macintosh/.test(navigator.userAgent) && 'ontouchend' in document) {
+    elem = document.getElementsByClassName('store-google');
+  }
   
   if (/Android/i.test(navigator.userAgent)){
     elem = document.getElementsByClassName('store-apple');
