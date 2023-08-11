@@ -142,10 +142,12 @@ body{
 
 .btn-google {
   background-image: url('google-store.png') !important;
+  display: block;
 }
 
 .btn-apple {
   background-image: url('apple-store.png') !important;
+  display: block;
 }
 
 .d-none {
